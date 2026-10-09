@@ -1,0 +1,92 @@
+/* 1. Reset CSS cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+
+/* 2. Container tổng xếp theo hàng dọc */
+.site-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 98vh;
+    gap: 10px;
+}
+
+/* 3. Header & Footer */
+.header {
+    background-color: #0056b3;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+/* 4. Navigation Bar */
+.nav {
+    display: flex;
+    justify-content: center;
+    background-color: #444;
+    padding: 12px;
+    gap: 15px;
+    border-radius: 4px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 12px;
+}
+
+.nav a:hover {
+    background-color: #666;
+    border-radius: 4px;
+}
+
+/* 5. Khung chứa Main Content & Sidebar (Xếp theo hàng ngang trên Desktop) */
+.main-body {
+    display: flex;
+    flex: 1; /* Chiếm phần không gian dọc còn lại */
+    gap: 10px;
+}
+
+.content {
+    flex: 3; /* Chiếm 3 phần chiều rộng */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.sidebar {
+    flex: 1; /* Chiếm 1 phần chiều rộng */
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+/* 6. RESPONSIVE DÀNH CHO MOBILE (<= 768px) */
+@media (max-width: 768px) {
+    .main-body {
+        flex-direction: column; /* Chuyển Content và Sidebar thành hàng dọc */
+    }
+
+    .nav {
+        flex-direction: column; /* Menu xếp dọc trên Mobile */
+        text-align: center;
+    }
+}
